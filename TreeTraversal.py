@@ -3,16 +3,10 @@ def preorder(node):
     if (node is None):
         return  []
 
-    #First, visit root:
-    root = node.value
-    if node.left and node.right:
-        return [root] + preorder(node.left) + preorder(node.right)
-    elif not(node.left):
-        return [root] + preorder(node.right)
-    elif not(node.right):
-        return [root] + preorder(node.left)
-    else:
-        return [root] 
+    #1. visit root
+    #2. traverse left subtree
+    #3. traverse right subtree
+    return [root] + preorder(node.left) + preorder(node.right)
 
 def postorder(node):
     if (node is None):
