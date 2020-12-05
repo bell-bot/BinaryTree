@@ -6,7 +6,7 @@ def preorder(node):
     #1. visit root
     #2. traverse left subtree
     #3. traverse right subtree
-    return [root] + preorder(node.left) + preorder(node.right)
+    return [node.value] + preorder(node.left) + preorder(node.right)
 
 def postorder(node):
     if (node is None):
